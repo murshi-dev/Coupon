@@ -1,0 +1,57 @@
+@import "colors";
+@import "mediaqueries";
+.maincontent {
+  background-color: $secondary;
+  color: $textcolor;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  @include smallscreen {
+    grid-template-columns: 1fr;
+  }
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  }
+input[type="button"] {
+  color: $textcolor;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: $buttoncolor;
+  border-radius: 10px;
+  border: none;
+  padding: 8px 20px;
+}
+
+input[type="button"]:hover {
+  background-color: $buttonhover;
+}
+.wrapper {
+  background-color: $primary;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 3px;
+}
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+.form-row > label {
+  padding-top: 20px;
+  padding-right: 50px;
+
+  flex: 1;
+}
+.form-row > input {
+  flex: 1;
+}
